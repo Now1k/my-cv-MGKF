@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./style.scss";
 
 interface Experience {
   description: string;
@@ -33,13 +34,13 @@ const cvData: CVData = {
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <main>
-      <header>
+    <main className="cv-main">
+      <header className="cv-header">
         <h1>
           CV {cvData.name} {cvData.lastName}
         </h1>
       </header>
-      <aside>
+      <aside className="cv-personal">
         <h2>Personal data</h2>
         <img
           src={cvData.photo}
@@ -50,7 +51,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </p>
         <small>{cvData.position}</small>
       </aside>
-      <section>
+      <section className="cv-details">
         <h2>Experience</h2>
         <ul>
           {cvData.experience.map((experience) => (
