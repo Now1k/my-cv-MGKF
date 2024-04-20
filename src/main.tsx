@@ -43,6 +43,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <aside className="cv-personal">
         <h2>Personal data</h2>
         <img
+          className="cv-photo"
           src={cvData.photo}
           alt={`${cvData.name} ${cvData.lastName} profile photo`}
         />
